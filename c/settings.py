@@ -24,7 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'game',
-    'channels',
+    'c',
     'webpack_loader',
     'rest_framework'
 ]
@@ -40,7 +40,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'channels_obstruction.urls'
+ROOT_URLCONF = 'c.urls'
 
 TEMPLATES = [
     {
@@ -58,7 +58,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'channels_obstruction.wsgi.application'
+WSGI_APPLICATION = 'c.wsgi.application'
 
 
 # Database
@@ -115,7 +115,7 @@ STATICFILES_DIRS = [
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "asgiref.inmemory.ChannelLayer",
-        "ROUTING": "channels_obstruction.routing.channel_routing",
+        "ROUTING": "c.routing.channel_routing",
     },
 }
 
